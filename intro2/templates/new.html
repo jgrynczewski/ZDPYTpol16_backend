@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Przycisk</title>
+
+    <style>
+        #przycisk {
+            background-color: blue;
+            padding: 1%;
+            color: white;
+            font: 22px bold;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('przycisk').onclick = function() {
+                this.innerHTML = "Przyciśnięty";
+            }
+        });
+    </script>
+
+</head>
+<body>
+    <button id="przycisk">Przyciśnij</button>
+</body>
+</html>
