@@ -37,7 +37,26 @@ def display_name2(request, name):
 
 
 def is_it_new_year(request):
-    now = datetime.datetime.now()
-    is_new_year = now.day==30 and now.month==1
-    return render(request, 'new_app/is_it_newyear.html', {"is_new_year": is_new_year})
+    """Jinja conditions"""
 
+    now = datetime.datetime.now()
+    is_new_year = now.day==1 and now.month==1
+
+    return render(
+        request,
+        'new_app/is_it_newyear.html',
+        {
+            "is_new_year": is_new_year,
+        }
+    )
+
+
+def fruits(request):
+    """Jinja loops"""
+
+    fruits = ['jabłko', 'banan', 'winogrona', 'mandarynki']
+    return render(
+        request,
+        'new_app/fruits.html',
+        {"fruits": fruits},
+    )

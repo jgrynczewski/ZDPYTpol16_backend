@@ -1,14 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>New year</title>
+    <link rel="stylesheet" href="{% static 'new_app/css/style.css' %}">
 </head>
 <body>
     {% if is_new_year %}
-        TAK
+        <h1>TAK</h1>
     {% else %}
-        NIE
+        <h1>NIE</h1>
     {% endif %}
 </body>
 </html>
