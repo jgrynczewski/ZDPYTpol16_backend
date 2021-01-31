@@ -1,0 +1,11 @@
+{% extends "inheritance/base.html" %}
+
+{% block title %}Pierwsza strona{% endblock %}
+
+{% block body %}
+    <h3>To jest pierwsza strona!</h3>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam amet dolor fuga laborum maiores minus molestias quibusdam sint tenetur veniam. Aut distinctio doloremque dolores eveniet incidunt perferendis quibusdam suscipit voluptatem!
+    <br/>
+    <br/>
+    Przejdź do strony <a href="{% url 'inheritance:second' %}">drugiej</a>.
+{% endblock %}

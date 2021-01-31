@@ -26,4 +26,7 @@ urlpatterns = [
     # path('hello3/', views.hello3),
     # path('new/', views.new),
     path('new_app/', include('new_app.urls')),
+    path('links/', include('links.urls')),
+    path('inheritance/', include('inheritance.urls')),
+    path('form_app/', include('form_app.urls')),
 ]
