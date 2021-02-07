@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+from config import Config
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -19,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0v-t99f=!&25l^vt9!w_jqe&f6(&x_nn$6exo#@jhjvud$dp*l'
+SECRET_KEY='0v-t99f=!&25l^vt9!w_jqe&f6(&x_nn$6exo#@jhjvud$dp*l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     'form_app',
     'form_app2',
     'form_app3',
+    'form_app4',
 ]
 
 MIDDLEWARE = [

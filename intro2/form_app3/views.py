@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
+from form_app3.models import Task
+
+
 # Create your views here.
 def register(reqeust):
     return render(
@@ -10,14 +13,15 @@ def register(reqeust):
 
 def task_list(request):
 
-    with open('tasks.txt', 'a+') as f:
-        task = request.POST.get('task')
+    task = request.POST.get('task')
 
-        if task:
-            f.write(task+"\n")
+    if task:
+        Task.objects.create(name=task)
 
-    with open('tasks.txt', 'r') as f:
-        tasks = f.readlines()
+        # Alternatywnie
+        # Task(name=task).save()
+
+    tasks = Task.objects.all()
 
     return render(
         request,

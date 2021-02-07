@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>Zmodyfikuj zadanie numer {{ task.id }}:</h3>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="task" value="{{ task }}">
+        <input type="submit" value="Modyfikuj">
+    </form>
+</body>
+</html>
