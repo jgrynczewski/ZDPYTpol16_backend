@@ -5,11 +5,31 @@
     <title>Owoce</title>
 </head>
 <body>
+
+    {{ request.user }}
+
+    <!--Komentarze jinjy-->
+    {# komentarz jednolinijkowy #}
+    {% comment %}
+        {{ Komentarz wielolinijkowy }}
+    {% endcomment %}
+    <!-- Filtry -->
+    <p>{{ fruits | length }}</p>
+    <p>{{ fruits | join:" " }}</p>
+    <p>{{ fruits | length | add:"2" }}</p>
+
     <h3>Lista owoców:</h3>
     <ul>
         {% for fruit in fruits %}
             <li>{{ fruit }}</li>
+            {{ forloop.counter }} {{ forloop.first }}
+            <!-- <li>{{ fruit | upper }}</li>-->
+            <!--<li>{{ fruit | capfirst }}</li>-->
+            <!--<li>{{ fruit | cut:"a" }}</li>-->
+
         {% endfor %}
     </ul>
+
+    {{ fruits.1 }}
 </body>
 </html>
